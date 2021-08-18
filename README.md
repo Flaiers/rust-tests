@@ -1,1 +1,2 @@
-tests-rust
+Rust language tests
+===================
