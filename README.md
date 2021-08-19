@@ -66,10 +66,9 @@ cargo run --release
 Running 2m test @ http://127.0.0.1:8000
   4 threads and 200 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     5.33ms    3.71ms  77.88ms   75.54%
-    Req/Sec     5.76k     1.21k   12.14k    70.84%
-  2749455 requests in 2.00m, 650.28MB read
-  Socket errors: connect 0, read 2749442, write 0, timeout 0
-Requests/sec:  22894.91
-Transfer/sec:      5.41MB
+    Latency     3.27ms    2.28ms  53.43ms   81.90%
+    Req/Sec    16.05k     2.06k   43.41k    78.70%
+  7666411 requests in 2.00m, 1.77GB read
+Requests/sec:  63835.70
+Transfer/sec:     15.10MB
 ```

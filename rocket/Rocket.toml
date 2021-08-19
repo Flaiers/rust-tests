@@ -2,7 +2,7 @@
 address = "0.0.0.0"
 port = 8000
 workers = 8
-keep_alive = 0
+keep_alive = 5
 log_level = "critical"
 cli_colors = true
 secret_key = "hPRYyVRiMyxpw5sBB1XeCMN1kFsDCqKvBi2QJxBVHQk="
