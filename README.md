@@ -3,6 +3,12 @@ Rust language tests
 
 Use tests
 ---------
+### Install Rust
+
+Described in this repository: [Flaiers/the-rust](https://github.com/Flaiers/the-rust)
+
+***
+
 ### Install project
 
 ```bash
@@ -29,8 +35,8 @@ wrk -c200 -t4 -d120s http://127.0.0.1:8000
 
 &nbsp;
 
-Actix-web results
------------------
+Actix-web
+---------
 ### Easy requests, no db
 
 I run:
@@ -38,6 +44,8 @@ I run:
 ```bash
 cargo run
 ```
+
+Result:
 
 ```
 Running 2m test @ http://127.0.0.1:8000
@@ -52,8 +60,8 @@ Transfer/sec:      2.20MB
 
 &nbsp;
 
-Rocket results
---------------
+Rocket
+------
 ### Easy requests, no db
 
 I run:
@@ -61,6 +69,8 @@ I run:
 ```bash
 cargo run --release
 ```
+
+Result:
 
 ```
 Running 2m test @ http://127.0.0.1:8000
