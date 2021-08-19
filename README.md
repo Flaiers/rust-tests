@@ -59,17 +59,17 @@ Rocket results
 I run:
 
 ```bash
-ROCKET_ENV=prod cargo run
+cargo run --release
 ```
 
 ```
 Running 2m test @ http://127.0.0.1:8000
   4 threads and 200 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    16.02ms   31.60ms   1.67s    98.72%
-    Req/Sec     2.38k   525.70     3.97k    67.29%
-  1138500 requests in 2.00m, 158.52MB read
-  Socket errors: connect 0, read 1138498, write 0, timeout 5
-Requests/sec:   9480.84
-Transfer/sec:      1.32MB
+    Latency     5.33ms    3.71ms  77.88ms   75.54%
+    Req/Sec     5.76k     1.21k   12.14k    70.84%
+  2749455 requests in 2.00m, 650.28MB read
+  Socket errors: connect 0, read 2749442, write 0, timeout 0
+Requests/sec:  22894.91
+Transfer/sec:      5.41MB
 ```
