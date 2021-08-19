@@ -24,7 +24,7 @@ sudo cp wrk /usr/bin/
 ### Run
 
 ```bash
-wrk -c200 -t1 -d15s http://127.0.0.1:8000
+wrk -c200 -t4 -d120s http://127.0.0.1:8000
 ```
 
 &nbsp;
@@ -33,15 +33,21 @@ Actix-web results
 -----------------
 ### Easy requests, no db
 
+I run:
+
+```bash
+cargo run
 ```
-Running 15s test @ http://127.0.0.1:8000
-  1 threads and 200 connections
+
+```
+Running 2m test @ http://127.0.0.1:8000
+  4 threads and 200 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     7.41ms    2.47ms  34.26ms   84.24%
-    Req/Sec    27.12k     1.18k   27.91k    92.00%
-  404761 requests in 15.01s, 33.97MB read
-Requests/sec:  26970.43
-Transfer/sec:      2.26MB
+    Latency     7.78ms    2.71ms  74.73ms   93.75%
+    Req/Sec     6.57k   736.59     7.39k    90.85%
+  3139974 requests in 2.00m, 263.52MB read
+Requests/sec:  26161.21
+Transfer/sec:      2.20MB
 ```
 
 &nbsp;
@@ -50,13 +56,20 @@ Rocket results
 --------------
 ### Easy requests, no db
 
+I run:
+
+```bash
+ROCKET_ENV=prod cargo run
 ```
-Running 15s test @ http://127.0.0.1:8000
-  1 threads and 200 connections
+
+```
+Running 2m test @ http://127.0.0.1:8000
+  4 threads and 200 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    62.03ms   28.57ms 267.86ms   70.73%
-    Req/Sec     3.26k   394.43     3.63k    89.33%
-  48676 requests in 15.02s, 11.51MB read
-Requests/sec:   3240.66
-Transfer/sec:    784.85KB
+    Latency    16.02ms   31.60ms   1.67s    98.72%
+    Req/Sec     2.38k   525.70     3.97k    67.29%
+  1138500 requests in 2.00m, 158.52MB read
+  Socket errors: connect 0, read 1138498, write 0, timeout 5
+Requests/sec:   9480.84
+Transfer/sec:      1.32MB
 ```
