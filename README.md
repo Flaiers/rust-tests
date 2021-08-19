@@ -43,3 +43,20 @@ Running 15s test @ http://127.0.0.1:8000
 Requests/sec:  26970.43
 Transfer/sec:      2.26MB
 ```
+
+&nbsp;
+
+Rocket results
+--------------
+### Easy requests, no db
+
+```
+Running 15s test @ http://127.0.0.1:8000
+  1 threads and 200 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    62.03ms   28.57ms 267.86ms   70.73%
+    Req/Sec     3.26k   394.43     3.63k    89.33%
+  48676 requests in 15.02s, 11.51MB read
+Requests/sec:   3240.66
+Transfer/sec:    784.85KB
+```
