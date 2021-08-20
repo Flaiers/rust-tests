@@ -1,8 +1,6 @@
 Rust language tests
 ===================
 
-Use tests
----------
 ### Install Rust
 
 Described in this repository: [Flaiers/the-rust](https://github.com/Flaiers/the-rust)
@@ -21,6 +19,7 @@ git clone git@github.com:Flaiers/rust-tests.git
 
 ```bash
 git clone git@github.com:wg/wrk.git ; \
+cd wrk ; \
 make -j 4 ; \
 sudo cp wrk /usr/bin/
 ```
